@@ -12,4 +12,6 @@ def findNemo(arr):
 
 
 nemo = ['nemo']
-findNemo(nemo)
+animals = ['fish', 'lizard', 'lion', 'cheetah', 'monkey', 'crocodile', 'nemo']
+
+findNemo(animals)
