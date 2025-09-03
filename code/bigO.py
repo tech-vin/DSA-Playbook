@@ -13,5 +13,6 @@ def findNemo(arr):
 
 nemo = ['nemo']
 animals = ['fish', 'lizard', 'lion', 'cheetah', 'monkey', 'crocodile', 'nemo']
+custom = [x for x in range(100000)]
 
-findNemo(animals)
+findNemo(custom)
