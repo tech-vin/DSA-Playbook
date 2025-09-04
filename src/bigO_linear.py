@@ -3,6 +3,7 @@ import time
 def findNemo(arr):
     for i in range(len(arr)):
         t1 = time.time()
+        print('Running: ', i)
         if arr[i] == 'nemo':
             print('Nemo Found :D')
         else:
@@ -12,7 +13,7 @@ def findNemo(arr):
 
 
 nemo = ['nemo']
-animals = ['fish', 'lizard', 'lion', 'cheetah', 'monkey', 'crocodile', 'nemo']
+animals = ['fish', 'nemo', 'lion', 'cheetah', 'monkey', 'crocodile', 'lizard']
 custom = [x for x in range(100000)]
 
-findNemo(custom)
+findNemo(animals)
