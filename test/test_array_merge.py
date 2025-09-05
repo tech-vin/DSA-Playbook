@@ -12,7 +12,6 @@ from src.array_merge import mergeArrayUsingTwoPointer
 ✅ Negative numbers
 ✅ Mixed numbers
 ✅ Single element
-✅ Large input (stress test)
 '''
 
 def test_normal_case():
@@ -36,17 +35,20 @@ def test_duplicate_elements():
     assert mergeArrayUsingTwoPointer(arr1, arr2) == expected
 
 def test_unequal_elements():
-    arr1, arr2, expected = [1, 2, 3], [4, 1], [1, 1, 2, 3, 4]
-    assert mergeArrayUsingHeapq(arr1, arr2, expected)
+    arr1, arr2, expected = [1, 2, 3], [4, 1], [1, 2, 3, 4, 1] # merge sorted array: we assume that arrays are already sorted
+    assert mergeArrayUsingHeapq(arr1, arr2) == expected
+    assert mergeArrayUsingTwoPointer(arr1, arr2) == expected
 
 def test_negative_numbers():
-    arr1, arr2, expected = [-1, -5, -2]
+    arr1, arr2, expected = [-5, -2, -1], [-10, -8, -5], [-10, -8, -5, -5, -2, -1]
+    assert mergeArrayUsingHeapq(arr1, arr2) ==  expected
+    assert mergeArrayUsingTwoPointer(arr1, arr2) == expected
 
 def test_mixed_negative_positive():
-    pass
+    arr1, arr2, expected = [-8, 1, 2], [1, 5, 9], [-8, 1, 1, 2, 5, 9]
+    assert mergeArrayUsingHeapq(arr1, arr2) == expected
+    assert mergeArrayUsingTwoPointer(arr1, arr2) == expected
 
 def test_single_element():
-    pass
-
-def test_large_input():
-    pass
+    assert mergeArrayUsingTwoPointer([1], [0]) == [0, 1]
+    assert mergeArrayUsingHeapq([5], [-4]) == [-4, 5]
