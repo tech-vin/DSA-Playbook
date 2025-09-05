@@ -1,3 +1,5 @@
+# BIG O -> O(n) 
+
 import time
 
 def findNemo(arr):

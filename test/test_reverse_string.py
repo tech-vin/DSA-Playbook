@@ -49,4 +49,10 @@ def test_special_char():
     assert reverseStringUsingBuiltIn('#$@!') == '!@$#'
 
 
+def test_spaces_and_symbols():
+    assert reverseString('a b c !') == ('! c b a')
+    assert reverseStringUsingBuiltIn('a b c !') == ('! c b a')
+    assert reverseStringUsingTwoPointer('a b c !') == ('! c b a')
+
+
     
