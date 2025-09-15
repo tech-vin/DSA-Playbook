@@ -42,9 +42,7 @@ def rotateArrayInPlace(arr, k):
     reverse(0, k - 1)
     reverse(k, n - 1)
 
-
-
-nums = [1,2,3,4,5,6,7]
+nums =  [1, 2, 3, 4, 5, 6, 7]
 k = 3
 rotateArrayInPlace(nums, k)
 print(nums)
